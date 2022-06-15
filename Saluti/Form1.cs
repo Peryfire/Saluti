@@ -19,5 +19,7 @@ namespace Saluti
                 MessageBox.Show("Ciao " + txtNome.Text + " " + txtCognome.Text + " e grazie per aver usato il programma.", "Saluti", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        //colori
     }
 }
