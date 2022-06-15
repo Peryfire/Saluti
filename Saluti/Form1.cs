@@ -7,6 +7,7 @@ namespace Saluti
             InitializeComponent();
         }
 
+        //bottone
         private void btnSaluta_Click(object sender, EventArgs e)
         {
             if (txtNome.Text == "" || txtCognome.Text == "")
