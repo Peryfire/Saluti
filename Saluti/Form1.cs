@@ -20,6 +20,17 @@ namespace Saluti
             }
         }
 
-        //colori
+        private void btnSelezionaOpacita_Click(object sender, EventArgs e)
+        {
+            double opacita;
+            if (double.TryParse(txtOpacita.Text, out opacita) && opacita <= 100 && opacita >= 50)
+            {
+                this.Opacity = opacita / 100;
+            }
+            else
+            {
+                MessageBox.Show("Numero non valido.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
