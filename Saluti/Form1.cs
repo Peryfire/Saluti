@@ -32,5 +32,23 @@ namespace Saluti
                 MessageBox.Show("Numero non valido.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnColoreSinistro_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDialog = new ColorDialog();
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                pnlSaluti.BackColor = colorDialog.Color;
+            }
+        }
+
+        private void btnColoreDestro_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDialog = new ColorDialog();
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                pnlAspetto.BackColor = colorDialog.Color;
+            }
+        }
     }
 }

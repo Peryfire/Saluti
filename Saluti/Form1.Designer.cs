@@ -34,15 +34,20 @@
             this.txtCognome = new System.Windows.Forms.TextBox();
             this.btnSaluta = new System.Windows.Forms.Button();
             this.pnlDesktop = new System.Windows.Forms.Panel();
-            this.pnlSaluti = new System.Windows.Forms.Panel();
             this.pnlAspetto = new System.Windows.Forms.Panel();
+            this.btnColoreDestro = new System.Windows.Forms.Button();
+            this.btnColoreSinistro = new System.Windows.Forms.Button();
+            this.lblColoreDestro = new System.Windows.Forms.Label();
+            this.lblColoreSinistro = new System.Windows.Forms.Label();
+            this.btnSelezionaOpacita = new System.Windows.Forms.Button();
+            this.lblMaxMinOpacita = new System.Windows.Forms.Label();
             this.txtOpacita = new System.Windows.Forms.TextBox();
             this.lblOpacita = new System.Windows.Forms.Label();
-            this.lblMaxMinOpacita = new System.Windows.Forms.Label();
-            this.btnSelezionaOpacita = new System.Windows.Forms.Button();
+            this.pnlSaluti = new System.Windows.Forms.Panel();
+            this.clrDlg = new System.Windows.Forms.ColorDialog();
             this.pnlDesktop.SuspendLayout();
-            this.pnlSaluti.SuspendLayout();
             this.pnlAspetto.SuspendLayout();
+            this.pnlSaluti.SuspendLayout();
             this.SuspendLayout();
             // 
             // Nome
@@ -100,21 +105,12 @@
             this.pnlDesktop.Size = new System.Drawing.Size(782, 353);
             this.pnlDesktop.TabIndex = 5;
             // 
-            // pnlSaluti
-            // 
-            this.pnlSaluti.Controls.Add(this.txtCognome);
-            this.pnlSaluti.Controls.Add(this.txtNome);
-            this.pnlSaluti.Controls.Add(this.lblCognome);
-            this.pnlSaluti.Controls.Add(this.btnSaluta);
-            this.pnlSaluti.Controls.Add(this.Nome);
-            this.pnlSaluti.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlSaluti.Location = new System.Drawing.Point(0, 0);
-            this.pnlSaluti.Name = "pnlSaluti";
-            this.pnlSaluti.Size = new System.Drawing.Size(391, 353);
-            this.pnlSaluti.TabIndex = 5;
-            // 
             // pnlAspetto
             // 
+            this.pnlAspetto.Controls.Add(this.btnColoreDestro);
+            this.pnlAspetto.Controls.Add(this.btnColoreSinistro);
+            this.pnlAspetto.Controls.Add(this.lblColoreDestro);
+            this.pnlAspetto.Controls.Add(this.lblColoreSinistro);
             this.pnlAspetto.Controls.Add(this.btnSelezionaOpacita);
             this.pnlAspetto.Controls.Add(this.lblMaxMinOpacita);
             this.pnlAspetto.Controls.Add(this.txtOpacita);
@@ -124,6 +120,69 @@
             this.pnlAspetto.Name = "pnlAspetto";
             this.pnlAspetto.Size = new System.Drawing.Size(391, 353);
             this.pnlAspetto.TabIndex = 6;
+            // 
+            // btnColoreDestro
+            // 
+            this.btnColoreDestro.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnColoreDestro.Location = new System.Drawing.Point(252, 223);
+            this.btnColoreDestro.Name = "btnColoreDestro";
+            this.btnColoreDestro.Size = new System.Drawing.Size(100, 30);
+            this.btnColoreDestro.TabIndex = 9;
+            this.btnColoreDestro.Text = "Seleziona";
+            this.btnColoreDestro.UseVisualStyleBackColor = true;
+            this.btnColoreDestro.Click += new System.EventHandler(this.btnColoreDestro_Click);
+            // 
+            // btnColoreSinistro
+            // 
+            this.btnColoreSinistro.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnColoreSinistro.Location = new System.Drawing.Point(252, 175);
+            this.btnColoreSinistro.Name = "btnColoreSinistro";
+            this.btnColoreSinistro.Size = new System.Drawing.Size(100, 30);
+            this.btnColoreSinistro.TabIndex = 5;
+            this.btnColoreSinistro.Text = "Seleziona";
+            this.btnColoreSinistro.UseVisualStyleBackColor = true;
+            this.btnColoreSinistro.Click += new System.EventHandler(this.btnColoreSinistro_Click);
+            // 
+            // lblColoreDestro
+            // 
+            this.lblColoreDestro.AutoSize = true;
+            this.lblColoreDestro.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblColoreDestro.Location = new System.Drawing.Point(26, 227);
+            this.lblColoreDestro.Name = "lblColoreDestro";
+            this.lblColoreDestro.Size = new System.Drawing.Size(184, 23);
+            this.lblColoreDestro.TabIndex = 8;
+            this.lblColoreDestro.Text = "Colore pannello destro";
+            // 
+            // lblColoreSinistro
+            // 
+            this.lblColoreSinistro.AutoSize = true;
+            this.lblColoreSinistro.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblColoreSinistro.Location = new System.Drawing.Point(26, 179);
+            this.lblColoreSinistro.Name = "lblColoreSinistro";
+            this.lblColoreSinistro.Size = new System.Drawing.Size(190, 23);
+            this.lblColoreSinistro.TabIndex = 7;
+            this.lblColoreSinistro.Text = "Colore pannello sinistro";
+            // 
+            // btnSelezionaOpacita
+            // 
+            this.btnSelezionaOpacita.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSelezionaOpacita.Location = new System.Drawing.Point(170, 109);
+            this.btnSelezionaOpacita.Name = "btnSelezionaOpacita";
+            this.btnSelezionaOpacita.Size = new System.Drawing.Size(100, 30);
+            this.btnSelezionaOpacita.TabIndex = 6;
+            this.btnSelezionaOpacita.Text = "Seleziona";
+            this.btnSelezionaOpacita.UseVisualStyleBackColor = true;
+            this.btnSelezionaOpacita.Click += new System.EventHandler(this.btnSelezionaOpacita_Click);
+            // 
+            // lblMaxMinOpacita
+            // 
+            this.lblMaxMinOpacita.AutoSize = true;
+            this.lblMaxMinOpacita.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMaxMinOpacita.Location = new System.Drawing.Point(170, 76);
+            this.lblMaxMinOpacita.Name = "lblMaxMinOpacita";
+            this.lblMaxMinOpacita.Size = new System.Drawing.Size(125, 19);
+            this.lblMaxMinOpacita.TabIndex = 5;
+            this.lblMaxMinOpacita.Text = "max. 100 - min. 50";
             // 
             // txtOpacita
             // 
@@ -142,26 +201,18 @@
             this.lblOpacita.TabIndex = 3;
             this.lblOpacita.Text = "Opacità";
             // 
-            // lblMaxMinOpacita
+            // pnlSaluti
             // 
-            this.lblMaxMinOpacita.AutoSize = true;
-            this.lblMaxMinOpacita.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMaxMinOpacita.Location = new System.Drawing.Point(170, 76);
-            this.lblMaxMinOpacita.Name = "lblMaxMinOpacita";
-            this.lblMaxMinOpacita.Size = new System.Drawing.Size(125, 19);
-            this.lblMaxMinOpacita.TabIndex = 5;
-            this.lblMaxMinOpacita.Text = "max. 100 - min. 50";
-            // 
-            // btnSelezionaOpacita
-            // 
-            this.btnSelezionaOpacita.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSelezionaOpacita.Location = new System.Drawing.Point(170, 109);
-            this.btnSelezionaOpacita.Name = "btnSelezionaOpacita";
-            this.btnSelezionaOpacita.Size = new System.Drawing.Size(100, 30);
-            this.btnSelezionaOpacita.TabIndex = 6;
-            this.btnSelezionaOpacita.Text = "Seleziona";
-            this.btnSelezionaOpacita.UseVisualStyleBackColor = true;
-            this.btnSelezionaOpacita.Click += new System.EventHandler(this.btnSelezionaOpacita_Click);
+            this.pnlSaluti.Controls.Add(this.txtCognome);
+            this.pnlSaluti.Controls.Add(this.txtNome);
+            this.pnlSaluti.Controls.Add(this.lblCognome);
+            this.pnlSaluti.Controls.Add(this.btnSaluta);
+            this.pnlSaluti.Controls.Add(this.Nome);
+            this.pnlSaluti.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlSaluti.Location = new System.Drawing.Point(0, 0);
+            this.pnlSaluti.Name = "pnlSaluti";
+            this.pnlSaluti.Size = new System.Drawing.Size(391, 353);
+            this.pnlSaluti.TabIndex = 5;
             // 
             // FormSaluti
             // 
@@ -169,14 +220,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 353);
             this.Controls.Add(this.pnlDesktop);
+            this.MaximizeBox = false;
             this.Name = "FormSaluti";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Saluti";
             this.pnlDesktop.ResumeLayout(false);
-            this.pnlSaluti.ResumeLayout(false);
-            this.pnlSaluti.PerformLayout();
             this.pnlAspetto.ResumeLayout(false);
             this.pnlAspetto.PerformLayout();
+            this.pnlSaluti.ResumeLayout(false);
+            this.pnlSaluti.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -195,5 +247,10 @@
         private TextBox txtOpacita;
         private Label lblOpacita;
         private Button btnSelezionaOpacita;
+        private Label lblColoreDestro;
+        private Label lblColoreSinistro;
+        private ColorDialog clrDlg;
+        private Button btnColoreDestro;
+        private Button btnColoreSinistro;
     }
 }
