@@ -35,15 +35,17 @@
             this.btnSaluta = new System.Windows.Forms.Button();
             this.pnlDesktop = new System.Windows.Forms.Panel();
             this.pnlAspetto = new System.Windows.Forms.Panel();
+            this.lblPannelloAspetto = new System.Windows.Forms.Label();
             this.btnColoreDestro = new System.Windows.Forms.Button();
             this.btnColoreSinistro = new System.Windows.Forms.Button();
-            this.lblColoreDestro = new System.Windows.Forms.Label();
-            this.lblColoreSinistro = new System.Windows.Forms.Label();
+            this.lblColoreAspetto = new System.Windows.Forms.Label();
+            this.lblColoreSaluti = new System.Windows.Forms.Label();
             this.btnSelezionaOpacita = new System.Windows.Forms.Button();
             this.lblMaxMinOpacita = new System.Windows.Forms.Label();
             this.txtOpacita = new System.Windows.Forms.TextBox();
             this.lblOpacita = new System.Windows.Forms.Label();
             this.pnlSaluti = new System.Windows.Forms.Panel();
+            this.lblPannelloSaluti = new System.Windows.Forms.Label();
             this.clrDlg = new System.Windows.Forms.ColorDialog();
             this.pnlDesktop.SuspendLayout();
             this.pnlAspetto.SuspendLayout();
@@ -54,7 +56,7 @@
             // 
             this.Nome.AutoSize = true;
             this.Nome.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Nome.Location = new System.Drawing.Point(60, 50);
+            this.Nome.Location = new System.Drawing.Point(60, 90);
             this.Nome.Name = "Nome";
             this.Nome.Size = new System.Drawing.Size(57, 23);
             this.Nome.TabIndex = 0;
@@ -64,7 +66,7 @@
             // 
             this.lblCognome.AutoSize = true;
             this.lblCognome.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCognome.Location = new System.Drawing.Point(60, 113);
+            this.lblCognome.Location = new System.Drawing.Point(60, 153);
             this.lblCognome.Name = "lblCognome";
             this.lblCognome.Size = new System.Drawing.Size(85, 23);
             this.lblCognome.TabIndex = 1;
@@ -72,14 +74,14 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(170, 49);
+            this.txtNome.Location = new System.Drawing.Point(170, 89);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(160, 27);
             this.txtNome.TabIndex = 2;
             // 
             // txtCognome
             // 
-            this.txtCognome.Location = new System.Drawing.Point(170, 109);
+            this.txtCognome.Location = new System.Drawing.Point(170, 149);
             this.txtCognome.Name = "txtCognome";
             this.txtCognome.Size = new System.Drawing.Size(160, 27);
             this.txtCognome.TabIndex = 3;
@@ -87,7 +89,7 @@
             // btnSaluta
             // 
             this.btnSaluta.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSaluta.Location = new System.Drawing.Point(170, 172);
+            this.btnSaluta.Location = new System.Drawing.Point(170, 212);
             this.btnSaluta.Name = "btnSaluta";
             this.btnSaluta.Size = new System.Drawing.Size(100, 30);
             this.btnSaluta.TabIndex = 4;
@@ -107,10 +109,11 @@
             // 
             // pnlAspetto
             // 
+            this.pnlAspetto.Controls.Add(this.lblPannelloAspetto);
             this.pnlAspetto.Controls.Add(this.btnColoreDestro);
             this.pnlAspetto.Controls.Add(this.btnColoreSinistro);
-            this.pnlAspetto.Controls.Add(this.lblColoreDestro);
-            this.pnlAspetto.Controls.Add(this.lblColoreSinistro);
+            this.pnlAspetto.Controls.Add(this.lblColoreAspetto);
+            this.pnlAspetto.Controls.Add(this.lblColoreSaluti);
             this.pnlAspetto.Controls.Add(this.btnSelezionaOpacita);
             this.pnlAspetto.Controls.Add(this.lblMaxMinOpacita);
             this.pnlAspetto.Controls.Add(this.txtOpacita);
@@ -121,10 +124,21 @@
             this.pnlAspetto.Size = new System.Drawing.Size(391, 353);
             this.pnlAspetto.TabIndex = 6;
             // 
+            // lblPannelloAspetto
+            // 
+            this.lblPannelloAspetto.AutoSize = true;
+            this.lblPannelloAspetto.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.lblPannelloAspetto.Location = new System.Drawing.Point(20, 20);
+            this.lblPannelloAspetto.Name = "lblPannelloAspetto";
+            this.lblPannelloAspetto.Size = new System.Drawing.Size(162, 28);
+            this.lblPannelloAspetto.TabIndex = 10;
+            this.lblPannelloAspetto.Text = "Pannello aspetto";
+            // 
             // btnColoreDestro
             // 
             this.btnColoreDestro.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnColoreDestro.Location = new System.Drawing.Point(252, 223);
+            this.btnColoreDestro.Location = new System.Drawing.Point(258, 148);
             this.btnColoreDestro.Name = "btnColoreDestro";
             this.btnColoreDestro.Size = new System.Drawing.Size(100, 30);
             this.btnColoreDestro.TabIndex = 9;
@@ -135,7 +149,7 @@
             // btnColoreSinistro
             // 
             this.btnColoreSinistro.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnColoreSinistro.Location = new System.Drawing.Point(252, 175);
+            this.btnColoreSinistro.Location = new System.Drawing.Point(258, 86);
             this.btnColoreSinistro.Name = "btnColoreSinistro";
             this.btnColoreSinistro.Size = new System.Drawing.Size(100, 30);
             this.btnColoreSinistro.TabIndex = 5;
@@ -143,30 +157,30 @@
             this.btnColoreSinistro.UseVisualStyleBackColor = true;
             this.btnColoreSinistro.Click += new System.EventHandler(this.btnColoreSinistro_Click);
             // 
-            // lblColoreDestro
+            // lblColoreAspetto
             // 
-            this.lblColoreDestro.AutoSize = true;
-            this.lblColoreDestro.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblColoreDestro.Location = new System.Drawing.Point(26, 227);
-            this.lblColoreDestro.Name = "lblColoreDestro";
-            this.lblColoreDestro.Size = new System.Drawing.Size(184, 23);
-            this.lblColoreDestro.TabIndex = 8;
-            this.lblColoreDestro.Text = "Colore pannello destro";
+            this.lblColoreAspetto.AutoSize = true;
+            this.lblColoreAspetto.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblColoreAspetto.Location = new System.Drawing.Point(32, 152);
+            this.lblColoreAspetto.Name = "lblColoreAspetto";
+            this.lblColoreAspetto.Size = new System.Drawing.Size(193, 23);
+            this.lblColoreAspetto.TabIndex = 8;
+            this.lblColoreAspetto.Text = "Colore pannello aspetto";
             // 
-            // lblColoreSinistro
+            // lblColoreSaluti
             // 
-            this.lblColoreSinistro.AutoSize = true;
-            this.lblColoreSinistro.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblColoreSinistro.Location = new System.Drawing.Point(26, 179);
-            this.lblColoreSinistro.Name = "lblColoreSinistro";
-            this.lblColoreSinistro.Size = new System.Drawing.Size(190, 23);
-            this.lblColoreSinistro.TabIndex = 7;
-            this.lblColoreSinistro.Text = "Colore pannello sinistro";
+            this.lblColoreSaluti.AutoSize = true;
+            this.lblColoreSaluti.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblColoreSaluti.Location = new System.Drawing.Point(32, 90);
+            this.lblColoreSaluti.Name = "lblColoreSaluti";
+            this.lblColoreSaluti.Size = new System.Drawing.Size(176, 23);
+            this.lblColoreSaluti.TabIndex = 7;
+            this.lblColoreSaluti.Text = "Colore pannello saluti";
             // 
             // btnSelezionaOpacita
             // 
             this.btnSelezionaOpacita.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSelezionaOpacita.Location = new System.Drawing.Point(170, 109);
+            this.btnSelezionaOpacita.Location = new System.Drawing.Point(258, 212);
             this.btnSelezionaOpacita.Name = "btnSelezionaOpacita";
             this.btnSelezionaOpacita.Size = new System.Drawing.Size(100, 30);
             this.btnSelezionaOpacita.TabIndex = 6;
@@ -178,7 +192,7 @@
             // 
             this.lblMaxMinOpacita.AutoSize = true;
             this.lblMaxMinOpacita.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMaxMinOpacita.Location = new System.Drawing.Point(170, 76);
+            this.lblMaxMinOpacita.Location = new System.Drawing.Point(115, 242);
             this.lblMaxMinOpacita.Name = "lblMaxMinOpacita";
             this.lblMaxMinOpacita.Size = new System.Drawing.Size(125, 19);
             this.lblMaxMinOpacita.TabIndex = 5;
@@ -186,16 +200,16 @@
             // 
             // txtOpacita
             // 
-            this.txtOpacita.Location = new System.Drawing.Point(170, 46);
+            this.txtOpacita.Location = new System.Drawing.Point(115, 212);
             this.txtOpacita.Name = "txtOpacita";
-            this.txtOpacita.Size = new System.Drawing.Size(160, 27);
+            this.txtOpacita.Size = new System.Drawing.Size(125, 27);
             this.txtOpacita.TabIndex = 4;
             // 
             // lblOpacita
             // 
             this.lblOpacita.AutoSize = true;
             this.lblOpacita.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblOpacita.Location = new System.Drawing.Point(60, 47);
+            this.lblOpacita.Location = new System.Drawing.Point(32, 213);
             this.lblOpacita.Name = "lblOpacita";
             this.lblOpacita.Size = new System.Drawing.Size(69, 23);
             this.lblOpacita.TabIndex = 3;
@@ -203,6 +217,7 @@
             // 
             // pnlSaluti
             // 
+            this.pnlSaluti.Controls.Add(this.lblPannelloSaluti);
             this.pnlSaluti.Controls.Add(this.txtCognome);
             this.pnlSaluti.Controls.Add(this.txtNome);
             this.pnlSaluti.Controls.Add(this.lblCognome);
@@ -213,6 +228,17 @@
             this.pnlSaluti.Name = "pnlSaluti";
             this.pnlSaluti.Size = new System.Drawing.Size(391, 353);
             this.pnlSaluti.TabIndex = 5;
+            // 
+            // lblPannelloSaluti
+            // 
+            this.lblPannelloSaluti.AutoSize = true;
+            this.lblPannelloSaluti.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.lblPannelloSaluti.Location = new System.Drawing.Point(20, 20);
+            this.lblPannelloSaluti.Name = "lblPannelloSaluti";
+            this.lblPannelloSaluti.Size = new System.Drawing.Size(147, 28);
+            this.lblPannelloSaluti.TabIndex = 5;
+            this.lblPannelloSaluti.Text = "Pannello saluti";
             // 
             // FormSaluti
             // 
@@ -247,10 +273,12 @@
         private TextBox txtOpacita;
         private Label lblOpacita;
         private Button btnSelezionaOpacita;
-        private Label lblColoreDestro;
-        private Label lblColoreSinistro;
+        private Label lblColoreAspetto;
+        private Label lblColoreSaluti;
         private ColorDialog clrDlg;
         private Button btnColoreDestro;
         private Button btnColoreSinistro;
+        private Label lblPannelloAspetto;
+        private Label lblPannelloSaluti;
     }
 }
