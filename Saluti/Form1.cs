@@ -19,5 +19,36 @@ namespace Saluti
                 MessageBox.Show("Ciao " + txtNome.Text + " " + txtCognome.Text + " e grazie per aver usato il programma.", "Saluti", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void btnSelezionaOpacita_Click(object sender, EventArgs e)
+        {
+            double opacita;
+            if (double.TryParse(txtOpacita.Text, out opacita) && opacita <= 100 && opacita >= 50)
+            {
+                this.Opacity = opacita / 100;
+            }
+            else
+            {
+                MessageBox.Show("Numero non valido.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnColoreSinistro_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDialog = new ColorDialog();
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                pnlSaluti.BackColor = colorDialog.Color;
+            }
+        }
+
+        private void btnColoreDestro_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDialog = new ColorDialog();
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                pnlAspetto.BackColor = colorDialog.Color;
+            }
+        }
     }
 }
