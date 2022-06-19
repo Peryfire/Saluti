@@ -2,9 +2,19 @@ namespace Saluti
 {
     public partial class FormSaluti : Form
     {
+        int oldSalutiWidth;
+        int oldAspettoWidth;
+        Point oldAspettoLocation;
         public FormSaluti()
         {
             InitializeComponent();
+        }
+
+        private void FormSaluti_Load(object sender, EventArgs e)
+        {
+            oldSalutiWidth = pnlSaluti.Width;
+            oldAspettoWidth = pnlAspetto.Width;
+            oldAspettoLocation = pnlAspetto.Location;
         }
 
         //bottone
@@ -48,6 +58,22 @@ namespace Saluti
             if (colorDialog.ShowDialog() == DialogResult.OK)
             {
                 pnlAspetto.BackColor = colorDialog.Color;
+            }
+        }
+
+        private void FormSaluti_SizeChanged(object sender, EventArgs e)
+        {
+            if (this.WindowState==FormWindowState.Maximized)
+            {
+                pnlSaluti.Width = this.Width / 2;
+                pnlAspetto.Width = this.Width / 2;
+                pnlAspetto.Location = new Point(this.Width / 2, pnlAspetto.Location.Y);
+            }
+            else if (this.WindowState==FormWindowState.Normal)
+            {
+                pnlSaluti.Width = oldSalutiWidth;
+                pnlAspetto.Width = oldAspettoWidth;
+                pnlAspetto.Location = oldAspettoLocation;
             }
         }
     }

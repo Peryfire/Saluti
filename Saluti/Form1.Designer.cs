@@ -246,10 +246,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 353);
             this.Controls.Add(this.pnlDesktop);
-            this.MaximizeBox = false;
             this.Name = "FormSaluti";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Saluti";
+            this.Load += new System.EventHandler(this.FormSaluti_Load);
+            this.SizeChanged += new System.EventHandler(this.FormSaluti_SizeChanged);
             this.pnlDesktop.ResumeLayout(false);
             this.pnlAspetto.ResumeLayout(false);
             this.pnlAspetto.PerformLayout();
